@@ -1,0 +1,59 @@
+/* Estilos para la tabla de empleados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para los botones de acción */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para el formulario de agregar/editar empleado */
+  form {
+    margin-top: 16px;
+  }
+  
+  form div {
+    margin-bottom: 8px;
+  }
+  
+  form label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  form input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el encabezado */
+  h2 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  

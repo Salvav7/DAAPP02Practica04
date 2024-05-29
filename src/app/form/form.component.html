@@ -1,0 +1,52 @@
+<div>
+    <h2>Lista de Empleados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Clave</th>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.clave }}</td>
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.direccion }}</td>
+          <td>{{ empleado.telefono }}</td>
+          <td>
+            <button (click)="editarEmpleado(empleado)">Editar</button>
+            <button (click)="empleado.clave && eliminarEmpleado(empleado.clave)">Eliminar</button>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <h2>{{ empleado.clave ? 'Editar Empleado' : 'Agregar Empleado' }}</h2>
+    <form (ngSubmit)="guardarEmpleado()">
+      <div>
+        <label>ID:</label>
+        <input type="text" [(ngModel)]="empleado.clave" name="clave" [readonly]="empleado.clave">
+      </div>
+      <div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="empleado.nombre" name="nombre" required>
+      </div>
+      <div>
+        <label>Dirección:</label>
+        <input type="text" [(ngModel)]="empleado.direccion" name="direccion" required>
+      </div>
+      <div>
+        <label>Teléfono:</label>
+        <input type="text" [(ngModel)]="empleado.telefono" name="telefono" required>
+      </div>
+      <button type="submit">{{ empleado.clave ? 'Actualizar' : 'Guardar' }}</button>
+      <button type="button" (click)="resetEmpleado()">Cancelar</button>
+    </form>
+  </div>
+  
